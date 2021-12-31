@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#97C1BD"
+    tools:context=".signup">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".signup">
+
+        <TextView
+            style="@style/textveiw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_to_sign_up_page" />
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow>
+
+                <TextView
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_name" />
+
+                <EditText
+                    android:id="@+id/username"
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/username" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/first_name"
+
+                    />
+
+                <EditText
+                    android:id="@+id/firstname"
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/first_name"
+
+                    />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/last_name" />
+
+                <EditText
+                    android:id="@+id/lastname"
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/last_name" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email" />
+
+                <EditText
+                    android:id="@+id/email"
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/password" />
+
+                <EditText
+                    android:id="@+id/password"
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone_number" />
+
+                <EditText
+                    android:id="@+id/phonenumber"
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/phone_number" />
+
+            </TableRow>
+        </TableLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/btn"
+            android:text="@string/done"
+            android:onClick="btnReg"
+
+            />
+
+
+    </LinearLayout>
+</FrameLayout>
+
+
+

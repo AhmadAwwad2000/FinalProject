@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">finalproject</string>
+    <string name="welcome_to_hotel_application">Welcome to Hotel application</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign up</string>
+    <string name="username">username :</string>
+    <string name="first_name">first name :</string>
+    <string name="last_name">last name :</string>
+    <string name="password">password :</string>
+    <string name="phone_number">phone number :</string>
+    <string name="email">email :</string>
+    <string name="user_name">User name :</string>
+    <string name="welcome_to_sign_up_page">Welcome to sign up page !!</string>
+    <string name="done">done</string>
+    <string name="welcome_to_login_page">Welcome to login page</string>
+</resources>

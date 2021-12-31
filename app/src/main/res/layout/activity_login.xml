@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".login">
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_to_login_page"
+        style="@style/textveiw"
+        />
+    <TableLayout
+        android:layout_marginTop="70pt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TableRow>
+
+        <TextView
+            style="@style/reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_name" />
+
+        <EditText
+            android:id="@+id/username"
+            style="@style/reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/username" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            style="@style/reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+
+            />
+
+        <EditText
+            android:id="@+id/password"
+            style="@style/reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+
+            />
+
+    </TableRow>
+    </TableLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/btn"
+        android:text="login"
+        android:onClick="btnlogin"/>
+
+</LinearLayout>
