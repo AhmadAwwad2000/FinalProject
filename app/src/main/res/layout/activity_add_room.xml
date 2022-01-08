@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#97C1BD"
+    tools:context=".AddRoom">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".addroom">
+
+        <TextView
+            style="@style/textveiw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_to_add_room_page" />
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow>
+
+                <TextView
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/room_number" />
+
+                <EditText
+                    android:id="@+id/room_number"
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/room_number" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Price"
+                    />
+
+
+                <EditText
+                    android:id="@+id/price"
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/price"
+
+                    />
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/category" />
+
+                <EditText
+                    android:id="@+id/category"
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/category" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Capacity" />
+
+                <EditText
+                    android:id="@+id/capacity"
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/Capacity" />
+
+            </TableRow>
+
+
+        </TableLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/btn"
+            android:text="@string/Add"
+            android:onClick="btnadd_room"
+
+            />
+
+
+    </LinearLayout>
+</FrameLayout>
+
+
+

@@ -13,4 +13,28 @@
     <string name="welcome_to_sign_up_page">Welcome to sign up page !!</string>
     <string name="done">done</string>
     <string name="welcome_to_login_page">Welcome to login page</string>
+    <string name="you_can_choose_you_want">You can choose you want !</string>
+    <string name="go_to_your_choose">go to your choose</string>
+    <string name="admin_Page">welcometo admin Page</string>
+    <string name="add_room">Add Room</string>
+    <string name="update_delete_room">Update/Delete Room</string>
+    <string name="room_number">Room Number</string>
+    <string name="Price">price</string>
+    <string name="price">price</string>
+    <string name="category">Category</string>
+    <string name="Capacity">capacaty</string>
+    <string name="Add">addroom</string>
+    <string name="welcome_to_add_room_page">rooom</string>
+    <string name="enter_the_room_number">enter the room number</string>
+    <string name="get_weather">get weather</string>
+    <string name="view_user">view user</string>
+    <string name="enterusername">enter the user name</string>
+    <string name="if_you_want_show_all_user_click_on_button">if you want show all user click on button</string>
+    <string name="search">Search</string>
+    <string name="show_all_user">show all user</string>
+    <string name="to_show_all_room_click_here">to show all room click here ..</string>
+    <string name="show_room">show room</string>
+    <string name="show_all_rooms">show all rooms</string>
+    <string name="enter_room_number_to_detete_it">Enter Room Number to Detete it</string>
+
 </resources>

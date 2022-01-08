@@ -10,14 +10,15 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import model.select_from_spinner;
+import model.select_from_spinner_user;
 
-public class mainpage extends AppCompatActivity {
+public class UserActivity extends AppCompatActivity {
 private TextView textview;
-private Spinner spinner;
+    private Spinner spinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mainpage);
+        setContentView(R.layout.activity_user);
         textview=findViewById(R.id.textview);
         spinner=findViewById(R.id.spinner);
         Intent intent=getIntent();
@@ -26,29 +27,17 @@ private Spinner spinner;
         fillspinner();
     }
     public void fillspinner(){
-        select_from_spinner type=new select_from_spinner();
+        select_from_spinner_user type=new select_from_spinner_user();
         String [] type1=type.cat();
         ArrayAdapter<String> adapter= new ArrayAdapter<>(this , android.R.layout.simple_spinner_item,type1);
         spinner.setAdapter(adapter);
     }
-
     public void spinneronclick(View view) {
         if(spinner.getSelectedItem().toString().equals("Search room")){
             Intent intent = new Intent(this ,searchRoom.class);
             startActivity(intent);}
-        else if(spinner.getSelectedItem().toString().equals("Add room")){
-            Intent intent2 = new Intent(this ,AddRoom.class);
-            startActivity(intent2);}
-        else if(spinner.getSelectedItem().toString().equals("View user")){
-            Intent intent2 = new Intent(this ,viewuser.class);
-            startActivity(intent2);}
-        else if(spinner.getSelectedItem().toString().equals("Remove room")){
-            Intent intent2 = new Intent(this ,deleteroom.class);
-            startActivity(intent2);}
-        else if(spinner.getSelectedItem().toString().equals("Update room")){
-            Intent intent2 = new Intent(this ,updateroom.class);
-            startActivity(intent2);}
+        else if(spinner.getSelectedItem().toString().equals("Swimming")){
+            Intent intent = new Intent(this ,swimming.class);
+            startActivity(intent);}
     }
-
-
 }

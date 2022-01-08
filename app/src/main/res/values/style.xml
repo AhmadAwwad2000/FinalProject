@@ -9,7 +9,7 @@
     </style>
     <style name="btn">
         <item name="android:layout_gravity">center</item>
-        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginTop">10dp</item>
 
     </style>
     <style name="reg">
@@ -24,7 +24,21 @@
 
 
     </style>
+    <style name="userandadmin">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:layout_marginTop">15dp</item>
 
+    </style>
+    <style name="spinner">
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
 
+<style name="viewuser">
+    <item name="android:layout_gravity">center</item>
+    <item name="android:textSize">15dp</item>
+    <item name="android:layout_margin">10dp</item>
+</style>
 
 </resources>

@@ -13,17 +13,46 @@
         android:theme="@style/Theme.Finalproject"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".mainpage"
+            android:name=".updateroom"
             android:exported="true" />
+        <activity
+            android:name=".deleteroom"
+            android:exported="true" />
+        <activity
+            android:name=".viewuser"
+            android:exported="true" />
+        <activity
+            android:name=".swimming"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddRoom"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".searchRoom"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mainpage"
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".login"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".signup"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

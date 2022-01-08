@@ -20,35 +20,29 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class signup extends AppCompatActivity {
-private EditText firstname,lastname,password,email,username,phonenumber;
+public class AddRoom extends AppCompatActivity {
+    EditText room_number,price,category,capacity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
-        firstname=findViewById(R.id.firstname);
-        lastname=findViewById(R.id.lastname);
-        password=findViewById(R.id.password);
-        email=findViewById(R.id.email);
-        username=findViewById(R.id.username);
-        phonenumber=findViewById(R.id.phonenumber);
+        setContentView(R.layout.activity_add_room);
+        room_number=findViewById(R.id.room_number);
+        price=findViewById(R.id.price);
+        category=findViewById(R.id.category);
+        capacity=findViewById(R.id.capacity);
     }
 
-    public void btnReg(View view) {
-        String fname=firstname.getText().toString();
-        String lname=lastname.getText().toString();
-        String pass=password.getText().toString();
-        String mail=email.getText().toString();
-        String uname=username.getText().toString();
-        String phone=phonenumber.getText().toString();
-        checkusername(fname,lname,pass,mail,uname,phone);
-       // signup(fname,lname,pass,mail,uname,phone);
-
-
+    public void btnadd_room(View view) {
+        String rnum=room_number.getText().toString();
+        String pr=price.getText().toString();
+        String cat=category.getText().toString();
+        String capa=capacity.getText().toString();
+        checkroom(rnum,pr,cat,capa);
+       // addroom(rnum,pr,cat,capa);
     }
-    public void checkusername(String fname,String lname,String pass,String mail,String uname,String phone){
-        String url = "http://10.0.2.2/android_project/username.php";
-        RequestQueue queue = Volley.newRequestQueue(signup.this);
+    public void checkroom(String rnum ,String pr ,String cat, String capa ){
+        String url = "http://10.0.2.2/android_project/roomnumber.php";
+        RequestQueue queue = Volley.newRequestQueue(AddRoom.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -57,10 +51,10 @@ private EditText firstname,lastname,password,email,username,phonenumber;
                     JSONObject jsonObject = new JSONObject(response);
                     // on below line we are displaying a success toast message.
                     if(jsonObject.getString("message").equals("true"))
-                    signup(fname,lname,pass,mail,uname,phone);
+                        addroom(rnum,pr,cat,capa);
                     else
-                        Toast.makeText(signup.this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
-                    } catch (JSONException e) {
+                        Toast.makeText(AddRoom.this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+                } catch (JSONException e) {
                     e.printStackTrace();
                 }
 
@@ -69,7 +63,7 @@ private EditText firstname,lastname,password,email,username,phonenumber;
             @Override
             public void onErrorResponse(VolleyError error) {
                 // method to handle errors.
-                Toast.makeText(signup.this,
+                Toast.makeText(AddRoom.this,
                         "Fail to get response = " + error, Toast.LENGTH_SHORT).show();
             }
         }) {
@@ -89,7 +83,7 @@ private EditText firstname,lastname,password,email,username,phonenumber;
 
                 // on below line we are passing our
                 // key and value pair to our parameters.
-                params.put("username", uname);
+                params.put("roomNumber", rnum);
 
 
 
@@ -101,12 +95,11 @@ private EditText firstname,lastname,password,email,username,phonenumber;
         // a json object request.
         queue.add(request);
 
-
     }
-    ///////////////////////////////////////////////////////////////////////////////////////////////////
-    public void signup(String fname,String lname,String pass,String mail,String uname, String phone){
-        String url = "http://10.0.2.2/android_project/adduser.php";
-        RequestQueue queue = Volley.newRequestQueue(signup.this);
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    public void addroom(String rnum,String pr,String cat,String capa){
+        String url = "http://10.0.2.2/android_project/addroom.php";
+        RequestQueue queue = Volley.newRequestQueue(AddRoom.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -114,7 +107,7 @@ private EditText firstname,lastname,password,email,username,phonenumber;
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     // on below line we are displaying a success toast message.
-                    Toast.makeText(signup.this,
+                    Toast.makeText(AddRoom.this,
                             jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -125,7 +118,7 @@ private EditText firstname,lastname,password,email,username,phonenumber;
             @Override
             public void onErrorResponse(VolleyError error) {
                 // method to handle errors.
-                Toast.makeText(signup.this,
+                Toast.makeText(AddRoom.this,
                         "Fail to get response = " + error, Toast.LENGTH_SHORT).show();
             }
         }) {
@@ -145,12 +138,10 @@ private EditText firstname,lastname,password,email,username,phonenumber;
 
                 // on below line we are passing our
                 // key and value pair to our parameters.
-                params.put("username", uname);
-                params.put("password", pass);
-                params.put("phoneNumber", phone);
-                params.put("first_name", fname);
-                params.put("last_name", lname);
-                params.put("email", mail);
+                params.put("room_number", rnum);
+                params.put("price", pr);
+                params.put("category", cat);
+                params.put("capacity", capa);
 
 
                 // at last we are returning our params.
@@ -164,4 +155,6 @@ private EditText firstname,lastname,password,email,username,phonenumber;
 
 
     }
+
+
 }
