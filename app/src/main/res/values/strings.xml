@@ -36,5 +36,7 @@
     <string name="show_room">show room</string>
     <string name="show_all_rooms">show all rooms</string>
     <string name="enter_room_number_to_detete_it">Enter Room Number to Detete it</string>
+    <string name="user_name2">username</string>
+    <string name="register">register</string>
 
 </resources>

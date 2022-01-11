@@ -30,7 +30,8 @@
             android:layout_marginTop="10dp"
             android:shadowColor="@color/cardview_light_background"
             android:text="@string/welcome_to_hotel_application"
-            android:textColor="#6D7BC5"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             android:textSize="20dp" />
 
         <Button

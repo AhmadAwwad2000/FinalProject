@@ -6,58 +6,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/img_4"
     tools:context=".login">
 
-    <EditText
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/welcome_to_login_page"
+    <TextView
         style="@style/textveiw"
-        />
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Login"
+        android:textSize="50sp" />
+
     <TableLayout
-        android:layout_marginTop="70pt"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70pt">
 
-    <TableRow>
+        <TableRow>
 
-        <TextView
-            style="@style/reg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/user_name" />
+            <TextView
+                style="@style/reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_name"
+                android:textColor="@color/black"
+                android:textSize="30dp"/>
 
-        <EditText
-            android:id="@+id/username"
-            style="@style/reg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/username" />
+            <EditText
+                android:id="@+id/username"
+                style="@style/reg"
+                android:layout_width="143dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/username"
+                android:textSize="25dp"/>
 
-    </TableRow>
+        </TableRow>
 
-    <TableRow>
+        <TableRow>
 
-        <TextView
-            style="@style/reg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/password"
+            <TextView
+                style="@style/reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password"
+                android:textSize="30dp"
+                />
 
-            />
+            <EditText
+                android:id="@+id/password"
+                style="@style/reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:textSize="25dp"
+                />
 
-        <EditText
-            android:id="@+id/password"
-            style="@style/reg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/password"
-
-            />
-
-    </TableRow>
+        </TableRow>
     </TableLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -65,8 +73,8 @@
 
         <CheckBox
             android:id="@+id/check"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="62dp"
+            android:layout_height="93dp"
             android:layout_gravity="center"
             android:layout_margin="15dp"
             android:layout_marginTop="20dp"
@@ -74,10 +82,17 @@
 
         <Button
             style="@style/btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="290dp"
+            android:layout_height="68dp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
             android:onClick="btnlogin"
             android:text="login" />
     </LinearLayout>
+
 
 </LinearLayout>

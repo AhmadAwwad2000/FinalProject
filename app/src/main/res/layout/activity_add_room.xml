@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/img_5"
 
-    android:background="#97C1BD"
     tools:context=".AddRoom">
 
 
@@ -21,7 +21,8 @@
             style="@style/textveiw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/welcome_to_add_room_page" />
+            android:text="@string/add_room"
+            android:textSize="50sp"/>
 
 
         <TableLayout
@@ -34,11 +35,14 @@
                     style="@style/reg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/room_number" />
+                    android:text="@string/room_number"
+                    android:textSize="25dp"
+                    />
 
                 <EditText
                     android:id="@+id/room_number"
                     style="@style/reg"
+                    android:textSize="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="@string/room_number" />
@@ -52,6 +56,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/Price"
+                    android:textSize="30dp"
                     />
 
 
@@ -61,7 +66,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="@string/price"
-
+                    android:textSize="25dp"
                     />
 
             </TableRow>
@@ -73,14 +78,16 @@
                     style="@style/reg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/category" />
+                    android:text="@string/category"
+                    android:textSize="25dp"/>
 
                 <EditText
                     android:id="@+id/category"
                     style="@style/reg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="@string/category" />
+                    android:hint="@string/category"
+                    android:textSize="20dp"/>
 
             </TableRow>
 
@@ -90,27 +97,32 @@
                     style="@style/reg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Capacity" />
+                    android:text="@string/Capacity"
+                    android:textSize="25dp"/>
 
                 <EditText
                     android:id="@+id/capacity"
                     style="@style/reg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="@string/Capacity" />
+                    android:hint="@string/Capacity"
+                    android:textSize="20dp"/>
 
             </TableRow>
 
 
         </TableLayout>
+
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             style="@style/btn"
-            android:text="@string/Add"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
             android:onClick="btnadd_room"
+            android:textSize="25dp"
+            android:text="@string/Add"
 
             />
+
 
 
     </LinearLayout>

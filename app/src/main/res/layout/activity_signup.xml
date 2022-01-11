@@ -4,29 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:background="#97C1BD"
+    android:background="@drawable/img_4"
+    android:orientation="vertical"
     tools:context=".signup">
 
+    <TextView
+        android:textSize="50dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/register" />
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        style="@style/textveiw"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".signup">
+        tools:context=".signup"
+        android:textSize="50sp">
 
-        <TextView
-            style="@style/textveiw"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/welcome_to_sign_up_page" />
+
 
 
         <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="400dp"
+            android:layout_height="540dp">
 
             <TableRow>
 
@@ -118,7 +124,9 @@
 
             </TableRow>
 
-            <TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <TextView
                     style="@style/reg"
@@ -134,15 +142,25 @@
                     android:hint="@string/phone_number" />
 
             </TableRow>
-        </TableLayout>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/btn"
-            android:text="@string/done"
-            android:onClick="btnReg"
 
-            />
+            <Button
+                style="@style/btn"
+                android:layout_width="20dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/roboto_regular"
+                android:onClick="btnReg"
+                android:text="@string/register"
+                android:textSize="30dp"
+
+
+                />
+        </TableLayout>
+
+
 
 
     </LinearLayout>

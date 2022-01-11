@@ -6,13 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#ECBCBC"
+    android:background="@drawable/img_4"
     tools:context=".mainpage">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/userandadmin"
+        android:textStyle="bold"
+        android:textColor="@color/black"
         android:id="@+id/textview"
 
         />
@@ -20,18 +22,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/userandadmin"
+        android:textSize="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="8dp"
+        android:background="@color/white"
+        android:gravity="center"
         android:text="@string/you_can_choose_you_want"/>
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         style="@style/spinner"
         android:id="@+id/spinner"
         />
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    style="@style/btn"
-    android:text="@string/go_to_your_choose"
-    android:onClick="spinneronclick"/>
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="80dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        style="@style/btn"
+        android:text="@string/go_to_your_choose"
+        android:onClick="spinneronclick"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -39,5 +39,8 @@ private TextView textview;
         else if(spinner.getSelectedItem().toString().equals("Swimming")){
             Intent intent = new Intent(this ,swimming.class);
             startActivity(intent);}
+        else if(spinner.getSelectedItem().toString().equals("Room reservations")){
+            Intent intent = new Intent(this ,reservations.class);
+            startActivity(intent);}
     }
 }

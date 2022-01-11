@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/font/roboto_regular.xml" value="0.24444444444444444" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_add_room.xml" value="0.1875" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_deleteroom.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_login.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_mainpage.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_reservations.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_search_room.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_signup.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_swimming.xml" value="0.23385416666666667" />

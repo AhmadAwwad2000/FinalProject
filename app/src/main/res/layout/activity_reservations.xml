@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_4"
+    tools:context=".reservations"
+    android:orientation="vertical">
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome To  Reservation room Page"
+        style="@style/textveiw"
+        />
+    <TableLayout
+        android:layout_marginTop="70pt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <TextView
+                style="@style/reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_name2"
+                />
+
+            <EditText
+                android:id="@+id/username"
+                style="@style/reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/username" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/room_number"
+
+                />
+
+            <EditText
+                android:id="@+id/roomnumber"
+                style="@style/reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="room number"
+
+                />
+
+        </TableRow>
+    </TableLayout>
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login">
+
+
+    <Button
+        style="@style/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btnreservation"
+        android:text="Reserve"
+        android:textSize="25dp"/>
+
+
+</LinearLayout>

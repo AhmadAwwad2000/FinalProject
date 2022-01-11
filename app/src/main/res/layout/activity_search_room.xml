@@ -6,39 +6,68 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/img_5"
     tools:context=".searchRoom">
-    <EditText
+    <TableLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/enter_the_room_number"
-        android:id="@+id/edtroomnumber"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/show_room"
+        android:layout_height="wrap_content">
 
-        android:onClick="btnSearch_Click"
-        />
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lstroom"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/to_show_all_room_click_here"
-        style="@style/textveiw"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/show_all_rooms"
-        android:onClick="showallroom"/>
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:hint="@string/enter_the_room_number"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:id="@+id/edtroomnumber"
+            android:background="@color/white"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:gravity="center"
+            android:layout_marginBottom="30dp"/>
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:id="@+id/allroom"/>
+        <Button
+            style="@style/btn"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginBottom="40dp"
+            android:onClick="btnSearch_Click"
+            android:text="@string/show_room"
+            android:textSize="22dp" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lstroom"/>
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:textSize="50dp"
+            android:layout_marginBottom="30dp"
+            android:text="click!"
+            android:gravity="center"
+            android:background="@color/white"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            style="@style/textveiw"
+            />
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="60dp"
+            android:text="@string/show_all_rooms"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:onClick="showallroom"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/allroom"/>
+    </TableLayout>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
