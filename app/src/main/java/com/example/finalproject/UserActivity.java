@@ -42,5 +42,8 @@ private TextView textview;
         else if(spinner.getSelectedItem().toString().equals("Room reservations")){
             Intent intent = new Intent(this ,reservations.class);
             startActivity(intent);}
+        else if(spinner.getSelectedItem().toString().equals("eat")){
+            Intent intent = new Intent(this ,rest_recycleview.class);
+            startActivity(intent);}
     }
 }

@@ -38,5 +38,17 @@
     <string name="enter_room_number_to_detete_it">Enter Room Number to Detete it</string>
     <string name="user_name2">username</string>
     <string name="register">register</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="enter_the_name_of_meal_you_want">enter the name of meal you want ..</string>
+    <string name="show_price">show price</string>
+    <string name="ok">ok</string>
 
 </resources>
