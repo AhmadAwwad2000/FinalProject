@@ -50,5 +50,7 @@
     <string name="enter_the_name_of_meal_you_want">enter the name of meal you want ..</string>
     <string name="show_price">show price</string>
     <string name="ok">ok</string>
+    <string name="the_price_is">the price is :</string>
+    <string name="go_to_main_page">go to main page</string>
 
 </resources>

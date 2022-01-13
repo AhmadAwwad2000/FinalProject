@@ -15,7 +15,7 @@
         <activity
             android:name=".confEat"
             android:exported="true" />
-        
+
         <activity
             android:name=".rest_recycleview"
             android:exported="true" />

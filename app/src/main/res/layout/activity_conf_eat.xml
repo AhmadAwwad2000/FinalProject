@@ -36,7 +36,8 @@
         android:layout_height="wrap_content"
         style="@style/textveiw"
         android:layout_marginTop="20dp"
-        android:id="@+id/show_price"/>
+        android:id="@+id/show_price"
+        android:hint="@string/the_price_is"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,6 +52,19 @@
         android:layout_height="wrap_content"
         style="@style/btn"
         android:text="@string/ok"
+        android:onClick="okmess"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textveiw"
+        android:layout_marginTop="15dp"
+        android:id="@+id/okmessage"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/btn"
+        android:text="@string/go_to_main_page"
         android:onClick="go_to_eat_page"/>
 
 
