@@ -18,18 +18,16 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.finalproject.R;
-import com.example.finalproject.login;
-import com.example.finalproject.mainpage;
-import com.example.finalproject.searchRoom;
+
 
 public class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter.ViewHolder> {
 
-    public static String[] captions;
+    public static String[] fooddb;
     private int[] imageIds;
 
 
-    public CaptionedImagesAdapter(String[] captions, int[] imageIds){
-        this.captions = captions;
+    public CaptionedImagesAdapter(String [] fooddb, int[] imageIds){
+        this.fooddb = fooddb;
         this.imageIds = imageIds;
     }
     @Override
@@ -47,17 +45,28 @@ public class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImages
     public void onBindViewHolder(ViewHolder holder, int position) {
         CardView cardView = holder.cardView;
         ImageView imageView = (ImageView) cardView.findViewById(R.id.image);
-        Drawable dr = ContextCompat.getDrawable(cardView.getContext(), imageIds[position]);
+        Drawable dr = ContextCompat.getDrawable(cardView.getContext() , imageIds[position]);
         imageView.setImageDrawable(dr);
         TextView txt = (TextView)cardView.findViewById(R.id.txtName);
-        txt.setText(captions[position]);
+        if (fooddb[position]==null){
+            txt.setText("err");
+        }
+       else{
+            txt.setText(fooddb[position]);
+        }
+        cardView.setOnClickListener( new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                //
+            }
+        });
 
         }
 
 
     @Override
     public int getItemCount() {
-        return captions.length;
+        return fooddb.length;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{

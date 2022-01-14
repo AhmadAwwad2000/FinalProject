@@ -12,7 +12,7 @@ public class Pizza {
             new Pizza("Diavolo2", R.drawable.img_6),
             new Pizza("Funghi2",  R.drawable.img_7),
             new Pizza("Diavolo3", R.drawable.img_6),
-            new Pizza("Funghi3",  R.drawable.img_7),
+
     };
     private Pizza(String name, int imageID){
         this.name = name;
