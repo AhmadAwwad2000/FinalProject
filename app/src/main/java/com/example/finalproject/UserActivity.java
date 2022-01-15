@@ -15,6 +15,7 @@ import model.select_from_spinner_user;
 public class UserActivity extends AppCompatActivity {
 private TextView textview;
     private Spinner spinner;
+    String uname="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +23,7 @@ private TextView textview;
         textview=findViewById(R.id.textview);
         spinner=findViewById(R.id.spinner);
         Intent intent=getIntent();
-        String uname=intent.getStringExtra("username");
+        uname=intent.getStringExtra("username");
         textview.setText("WELCOME "+uname);
         fillspinner();
     }
@@ -40,10 +41,14 @@ private TextView textview;
             Intent intent = new Intent(this ,swimming.class);
             startActivity(intent);}
         else if(spinner.getSelectedItem().toString().equals("Room reservations")){
-            Intent intent = new Intent(this ,reservations.class);
+            Intent intent = new Intent(this ,room_recycleview.class);
+            intent.putExtra("username",uname);
             startActivity(intent);}
         else if(spinner.getSelectedItem().toString().equals("eat")){
             Intent intent = new Intent(this ,rest_recycleview.class);
+            startActivity(intent);}
+        else if(spinner.getSelectedItem().toString().equals("cancellation of reservation")){
+            Intent intent = new Intent(this ,cancellationofreservation.class);
             startActivity(intent);}
     }
 }

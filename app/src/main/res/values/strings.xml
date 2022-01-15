@@ -52,5 +52,8 @@
     <string name="ok">ok</string>
     <string name="the_price_is">the price is :</string>
     <string name="go_to_main_page">go to main page</string>
+    <string name="update">update</string>
+    <string name="previous_page">previous page</string>
+    <string name="status">status</string>
 
 </resources>

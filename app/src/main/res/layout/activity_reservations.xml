@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img_4"
+    android:background="@drawable/img_5"
     tools:context=".reservations"
     android:orientation="vertical">
     <EditText
@@ -29,9 +29,10 @@
                 android:text="@string/user_name2"
                 />
 
-            <EditText
+            <TextView
                 android:id="@+id/username"
                 style="@style/reg"
+                android:textSize="21dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/username" />
@@ -71,7 +72,17 @@
         android:layout_height="wrap_content"
         android:onClick="btnreservation"
         android:text="Reserve"
-        android:textSize="25dp"/>
+        android:textSize="25dp"
+        android:layout_marginBottom="90dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/previos"
+        android:onClick="btnprevious"
+        android:text="@string/previous_page"
+        style="@style/btn"
+       />
 
 
 </LinearLayout>

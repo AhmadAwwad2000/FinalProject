@@ -48,7 +48,7 @@ public class searchRoom extends AppCompatActivity {
                     try {
                         JSONObject obj = response.getJSONObject(i);
                         String sent=obj.getString("roomNumber")+" "+obj.getString("price")+" "+obj.getString("category")+" "+
-                                obj.getString("capacity");
+                                obj.getString("capacity")+" "+obj.getString("status");
                         rooms.add(sent);
                     }catch(JSONException exception){
                         Log.d("Error", exception.toString());
@@ -85,7 +85,7 @@ public class searchRoom extends AppCompatActivity {
                 for (int i = 0; i < response.length(); i++) {
                     try {
                         JSONObject obj = response.getJSONObject(i);
-                        String s="room number :"+obj.getString("roomNumber")+".. price : "+obj.getString("price")+".. category : "+obj.getString("category")+".. capacity : "+obj.getString("capacity");
+                        String s="room number :"+obj.getString("roomNumber")+".. price : "+obj.getString("price")+".. category : "+obj.getString("category")+".. capacity : "+obj.getString("capacity")+" ..status"+" "+obj.getString("status");
                         rooms.add(s);
                     }catch(JSONException exception){
                         Log.d("Error", exception.toString());

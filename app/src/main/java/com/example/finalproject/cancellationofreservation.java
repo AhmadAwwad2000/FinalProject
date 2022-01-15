@@ -5,55 +5,37 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class updateroom extends AppCompatActivity {
-    EditText room_number,price,category,capacity,edtsearch,status;
-    private RequestQueue queue;
-
-
+public class cancellationofreservation extends AppCompatActivity {
+EditText edtcan;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_updateroom);
-        room_number=findViewById(R.id.room_number);
-        price=findViewById(R.id.price);
-        category=findViewById(R.id.category);
-        capacity=findViewById(R.id.capacity);
-        status=findViewById(R.id.status);
-
+        setContentView(R.layout.activity_cancellationofreservation);
+        edtcan=findViewById(R.id.edtcan);
     }
 
-    public void btnupdate_room(View view) {
-        String rnum=room_number.getText().toString();
-        String pr=price.getText().toString();
-        String cat=category.getText().toString();
-        String capa=capacity.getText().toString();
-        String stat=status.getText().toString();
-        updateroom(rnum,pr,cat,capa,stat);
+    public void onclickcan(View view) {
+String delete=edtcan.getText().toString();
+        delete( delete);
     }
-    public void updateroom(String rnum,String pr,String cat,String capa,String stat){
-        String url = "http://10.0.2.2/android_project/update.php";
-        RequestQueue queue = Volley.newRequestQueue(updateroom.this);
+    public void delete(String delete){
+        String url = "http://10.0.2.2/android_project/deletefromres.php";
+        RequestQueue queue = Volley.newRequestQueue(cancellationofreservation.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -61,7 +43,7 @@ public class updateroom extends AppCompatActivity {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     // on below line we are displaying a success toast message.
-                    Toast.makeText(updateroom.this,
+                    Toast.makeText(cancellationofreservation.this,
                             jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -72,7 +54,7 @@ public class updateroom extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 // method to handle errors.
-                Toast.makeText(updateroom.this,
+                Toast.makeText(cancellationofreservation.this,
                         "Fail to get response = " + error, Toast.LENGTH_SHORT).show();
             }
         }) {
@@ -92,11 +74,9 @@ public class updateroom extends AppCompatActivity {
 
                 // on below line we are passing our
                 // key and value pair to our parameters.
-                params.put("room_number", rnum);
-                params.put("price", pr);
-                params.put("category", cat);
-                params.put("capacity", capa);
-                params.put("status", stat);
+                params.put("room_number", delete);
+                params.put("status","not reserved");
+
 
 
                 // at last we are returning our params.
@@ -110,5 +90,4 @@ public class updateroom extends AppCompatActivity {
 
 
     }
-
 }

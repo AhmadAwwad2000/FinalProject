@@ -112,6 +112,24 @@
                     android:hint="@string/Capacity" />
 
             </TableRow>
+            <TableRow>
+
+                <TextView
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/status"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:id="@+id/status"
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/status" />
+
+            </TableRow>
 
 
         </TableLayout>
@@ -121,7 +139,7 @@
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:onClick="btnupdate_room"
-            android:text="@string/Add"
+            android:text="@string/update"
 
             />
 

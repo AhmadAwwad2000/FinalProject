@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AddRoom extends AppCompatActivity {
-    EditText room_number,price,category,capacity;
+    EditText room_number,price,category,capacity,status;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +30,7 @@ public class AddRoom extends AppCompatActivity {
         price=findViewById(R.id.price);
         category=findViewById(R.id.category);
         capacity=findViewById(R.id.capacity);
+        status=findViewById(R.id.status);
     }
 
     public void btnadd_room(View view) {
@@ -37,10 +38,11 @@ public class AddRoom extends AppCompatActivity {
         String pr=price.getText().toString();
         String cat=category.getText().toString();
         String capa=capacity.getText().toString();
-        checkroom(rnum,pr,cat,capa);
+        String stat=status.getText().toString();
+        checkroom(rnum,pr,cat,capa,stat);
        // addroom(rnum,pr,cat,capa);
     }
-    public void checkroom(String rnum ,String pr ,String cat, String capa ){
+    public void checkroom(String rnum ,String pr ,String cat, String capa ,String stat){
         String url = "http://10.0.2.2/android_project/roomnumber.php";
         RequestQueue queue = Volley.newRequestQueue(AddRoom.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
@@ -51,7 +53,7 @@ public class AddRoom extends AppCompatActivity {
                     JSONObject jsonObject = new JSONObject(response);
                     // on below line we are displaying a success toast message.
                     if(jsonObject.getString("message").equals("true"))
-                        addroom(rnum,pr,cat,capa);
+                        addroom(rnum,pr,cat,capa,stat);
                     else
                         Toast.makeText(AddRoom.this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
                 } catch (JSONException e) {
@@ -97,7 +99,7 @@ public class AddRoom extends AppCompatActivity {
 
     }
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    public void addroom(String rnum,String pr,String cat,String capa){
+    public void addroom(String rnum,String pr,String cat,String capa,String stat){
         String url = "http://10.0.2.2/android_project/addroom.php";
         RequestQueue queue = Volley.newRequestQueue(AddRoom.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
@@ -142,6 +144,7 @@ public class AddRoom extends AppCompatActivity {
                 params.put("price", pr);
                 params.put("category", cat);
                 params.put("capacity", capa);
+                params.put("status",stat);
 
 
                 // at last we are returning our params.

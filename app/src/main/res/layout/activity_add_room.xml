@@ -109,6 +109,24 @@
                     android:textSize="20dp"/>
 
             </TableRow>
+            <TableRow>
+
+                <TextView
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/status"
+                    android:textSize="25dp"/>
+
+                <EditText
+                    android:id="@+id/status"
+                    style="@style/reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/status"
+                    android:textSize="20dp"/>
+
+            </TableRow>
 
 
         </TableLayout>

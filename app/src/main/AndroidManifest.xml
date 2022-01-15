@@ -13,24 +13,36 @@
         android:theme="@style/Theme.Finalproject"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".confEat"
+            android:name=".cancellationofreservation"
             android:exported="true" />
-
+        <activity
+            android:name=".room_recycleview"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".confEat"
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".rest_recycleview"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".reservations"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".updateroom"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".deleteroom"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".viewuser"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".swimming"
             android:exported="true"
