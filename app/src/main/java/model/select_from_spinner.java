@@ -9,7 +9,7 @@ private ArrayList<String> list=new ArrayList<>();
 
     }
     public String [] cat(){
-        String [] type=new String[]{"Add room","Search room","View user","Remove room","Update room"};
+        String [] type=new String[]{"Add room","Search room","View user","Remove room","Update room","View all booked rooms"};
         return type;
     }
 }

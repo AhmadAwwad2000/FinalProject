@@ -4,21 +4,27 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,6 +32,8 @@ public class reservations extends AppCompatActivity {
     private EditText roomnumber;
     private TextView username;
     String roomno="";
+    private EditText day ,totalprice;
+    private RequestQueue queue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +43,9 @@ public class reservations extends AppCompatActivity {
         roomnumber=findViewById(R.id.roomnumber);
         Intent intent=getIntent();
         username.setText(intent.getStringExtra("username"));
+        day=findViewById(R.id.day);
+        totalprice=findViewById(R.id.totalprice);
+        queue = Volley.newRequestQueue(this);
 
     }
 
@@ -115,7 +126,7 @@ public class reservations extends AppCompatActivity {
                     // on below line we are displaying a success toast message.
                     Toast.makeText(reservations.this,
                             jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
-                    changestatus(res);
+                    //changestatus(res);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -291,5 +302,60 @@ public class reservations extends AppCompatActivity {
     public void btnprevious(View view) {
         Intent intent = new Intent(this ,room_recycleview.class);
         startActivity(intent);
+    }
+
+    public void showprice(View view) {
+
+        int dayNo=Integer.parseInt(day.getText().toString());
+        String roomNo=roomnumber.getText().toString();
+        String url = "http://10.0.2.2/android_project/search_room.php?roomNumber=" + roomNo;
+
+        JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url,
+                null, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+              //  ArrayList<String> rooms = new ArrayList<>();
+                //for (int i = 0; i < response.length(); i++) {
+                String s="";
+                    try {
+                        JSONObject obj = response.getJSONObject(0);
+                        s =obj.getString("price");
+                //        rooms.add(s);
+                    }catch(JSONException exception){
+                        Log.d("Error", exception.toString());
+                    }
+                int priceOneDay=Integer.parseInt(s);
+                    computeprice(dayNo,priceOneDay);
+
+                //}
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+                Toast.makeText(reservations.this, error.toString(),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        queue.add(request);
+
+
+    }
+    public void computeprice(int Nday,int priceDay){
+        final Handler handler = new Handler();
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                int total=Nday*priceDay;
+                String tot=String.valueOf(total);
+                totalprice.setText(tot);
+            }
+        });
+
+
+
     }
 }

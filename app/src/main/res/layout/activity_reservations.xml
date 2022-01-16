@@ -8,7 +8,7 @@
     android:background="@drawable/img_5"
     tools:context=".reservations"
     android:orientation="vertical">
-    <EditText
+    <TextView
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         style="@style/textveiw"
         />
     <TableLayout
-        android:layout_marginTop="70pt"
+        android:layout_marginTop="40pt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -59,11 +59,48 @@
                 />
 
         </TableRow>
-    </TableLayout>
+        <TableRow>
 
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".login">
+            <TextView
+                style="@style/reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/number_of_day"
+
+                />
+
+            <EditText
+                android:id="@+id/day"
+                style="@style/reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="room number"
+
+                />
+
+        </TableRow>
+    </TableLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/btn"
+        android:layout_marginBottom="20dp"
+        android:text="@string/price"
+        android:onClick="showprice"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="@style/reg"
+    android:text="@string/the_total_price_is"
+    android:layout_marginTop="20dp"
+    />
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        style="@style/textveiw"
+        android:id="@+id/totalprice"
+        />
+
 
 
     <Button

@@ -55,5 +55,7 @@
     <string name="update">update</string>
     <string name="previous_page">previous page</string>
     <string name="status">status</string>
+    <string name="number_of_day">Number of Day</string>
+    <string name="the_total_price_is">the total price is :</string>
 
 </resources>

@@ -48,6 +48,9 @@ private Spinner spinner;
         else if(spinner.getSelectedItem().toString().equals("Update room")){
             Intent intent2 = new Intent(this ,updateroom.class);
             startActivity(intent2);}
+        else if(spinner.getSelectedItem().toString().equals("View all booked rooms")){
+            Intent intent2 = new Intent(this ,reserved_room.class);
+            startActivity(intent2);}
     }
 
 
