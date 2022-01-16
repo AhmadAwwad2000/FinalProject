@@ -68,12 +68,9 @@ String delete=edtcan.getText().toString();
             @Override
             protected Map<String, String> getParams() {
 
-                // below line we are creating a map for storing
-                // our values in key and value pair.
+
                 Map<String, String> params = new HashMap<String, String>();
 
-                // on below line we are passing our
-                // key and value pair to our parameters.
                 params.put("room_number", delete);
                 params.put("status","not reserved");
 
@@ -83,8 +80,7 @@ String delete=edtcan.getText().toString();
                 return params;
             }
         };
-        // below line is to make
-        // a json object request.
+
         queue.add(request);
 
 

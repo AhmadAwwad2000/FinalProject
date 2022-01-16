@@ -86,30 +86,27 @@ public class reservations extends AppCompatActivity {
         }) {
             @Override
             public String getBodyContentType() {
-                // as we are passing data in the form of url encoded
-                // so we are passing the content type below
+
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
 
             @Override
             protected Map<String, String> getParams() {
 
-                // below line we are creating a map for storing
-                // our values in key and value pair.
+
                 Map<String, String> params = new HashMap<String, String>();
 
-                // on below line we are passing our
-                // key and value pair to our parameters.
+
                 params.put("roomNumber", room);
 
 
 
-                // at last we are returning our params.
+
                 return params;
             }
         };
-        // below line is to make
-        // a json object request.
+
+
         queue.add(request);
 
     }
@@ -136,39 +133,35 @@ public class reservations extends AppCompatActivity {
         }, new com.android.volley.Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                // method to handle errors.
+
                 Toast.makeText(reservations.this,
                         "Fail to get response = " + error, Toast.LENGTH_SHORT).show();
             }
         }) {
             @Override
             public String getBodyContentType() {
-                // as we are passing data in the form of url encoded
-                // so we are passing the content type below
+
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
 
             @Override
             protected Map<String, String> getParams() {
 
-                // below line we are creating a map for storing
-                // our values in key and value pair.
+
                 Map<String, String> params = new HashMap<String, String>();
 
-                // on below line we are passing our
-                // key and value pair to our parameters.
+
 
                 params.put("room_number", res);
                 params.put("status","reserved");
 
 
 
-                // at last we are returning our params.
+
                 return params;
             }
         };
-        // below line is to make
-        // a json object request.
+
         queue.add(request);
 
 
@@ -203,30 +196,25 @@ public class reservations extends AppCompatActivity {
         }) {
             @Override
             public String getBodyContentType() {
-                // as we are passing data in the form of url encoded
-                // so we are passing the content type below
+
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
 
             @Override
             protected Map<String, String> getParams() {
 
-                // below line we are creating a map for storing
-                // our values in key and value pair.
+
                 Map<String, String> params = new HashMap<String, String>();
 
-                // on below line we are passing our
-                // key and value pair to our parameters.
                 params.put("res", res);
 
 
 
-                // at last we are returning our params.
+
                 return params;
             }
         };
-        // below line is to make
-        // a json object request.
+
         queue.add(request);
 
 
@@ -242,7 +230,7 @@ public class reservations extends AppCompatActivity {
                 Log.e("TAG", "RESPONSE IS " + response);
                 try {
                     JSONObject jsonObject = new JSONObject(response);
-                    // on below line we are displaying a success toast message.
+
                     Toast.makeText(reservations.this,
                             jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
                     changestatus(res);
@@ -262,31 +250,28 @@ public class reservations extends AppCompatActivity {
         }) {
             @Override
             public String getBodyContentType() {
-                // as we are passing data in the form of url encoded
-                // so we are passing the content type below
+
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
 
             @Override
             protected Map<String, String> getParams() {
 
-                // below line we are creating a map for storing
-                // our values in key and value pair.
+
                 Map<String, String> params = new HashMap<String, String>();
 
-                // on below line we are passing our
-                // key and value pair to our parameters.
                 params.put("username", uname);
                 params.put("roomNumber", res);
+                params.put("days", day.getText().toString());
 
 
 
-                // at last we are returning our params.
+
+
                 return params;
             }
         };
-        // below line is to make
-        // a json object request.
+
         queue.add(request);
 
 
@@ -309,20 +294,19 @@ public class reservations extends AppCompatActivity {
                 null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
-              //  ArrayList<String> rooms = new ArrayList<>();
-                //for (int i = 0; i < response.length(); i++) {
+
                 String s="";
                     try {
                         JSONObject obj = response.getJSONObject(0);
                         s =obj.getString("price");
-                //        rooms.add(s);
+
                     }catch(JSONException exception){
                         Log.d("Error", exception.toString());
                     }
                 int priceOneDay=Integer.parseInt(s);
                     computeprice(dayNo,priceOneDay);
 
-                //}
+
 
 
             }

@@ -40,7 +40,7 @@ public class AddRoom extends AppCompatActivity {
         String capa=capacity.getText().toString();
         String stat=status.getText().toString();
         checkroom(rnum,pr,cat,capa,stat);
-       // addroom(rnum,pr,cat,capa);
+
     }
     public void checkroom(String rnum ,String pr ,String cat, String capa ,String stat){
         String url = "http://10.0.2.2/android_project/roomnumber.php";
@@ -51,7 +51,7 @@ public class AddRoom extends AppCompatActivity {
                 Log.e("TAG", "RESPONSE IS " + response);
                 try {
                     JSONObject jsonObject = new JSONObject(response);
-                    // on below line we are displaying a success toast message.
+
                     if(jsonObject.getString("message").equals("true"))
                         addroom(rnum,pr,cat,capa,stat);
                     else
@@ -64,37 +64,33 @@ public class AddRoom extends AppCompatActivity {
         }, new com.android.volley.Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                // method to handle errors.
+
                 Toast.makeText(AddRoom.this,
                         "Fail to get response = " + error, Toast.LENGTH_SHORT).show();
             }
         }) {
             @Override
             public String getBodyContentType() {
-                // as we are passing data in the form of url encoded
-                // so we are passing the content type below
+
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
 
             @Override
             protected Map<String, String> getParams() {
 
-                // below line we are creating a map for storing
-                // our values in key and value pair.
+
                 Map<String, String> params = new HashMap<String, String>();
 
-                // on below line we are passing our
-                // key and value pair to our parameters.
+
                 params.put("roomNumber", rnum);
 
 
 
-                // at last we are returning our params.
+
                 return params;
             }
         };
-        // below line is to make
-        // a json object request.
+
         queue.add(request);
 
     }
@@ -126,20 +122,17 @@ public class AddRoom extends AppCompatActivity {
         }) {
             @Override
             public String getBodyContentType() {
-                // as we are passing data in the form of url encoded
-                // so we are passing the content type below
+
                 return "application/x-www-form-urlencoded; charset=UTF-8";
             }
 
             @Override
             protected Map<String, String> getParams() {
 
-                // below line we are creating a map for storing
-                // our values in key and value pair.
+
                 Map<String, String> params = new HashMap<String, String>();
 
-                // on below line we are passing our
-                // key and value pair to our parameters.
+
                 params.put("room_number", rnum);
                 params.put("price", pr);
                 params.put("category", cat);
@@ -147,12 +140,11 @@ public class AddRoom extends AppCompatActivity {
                 params.put("status",stat);
 
 
-                // at last we are returning our params.
+
                 return params;
             }
         };
-        // below line is to make
-        // a json object request.
+
         queue.add(request);
 
 

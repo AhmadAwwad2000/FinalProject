@@ -94,18 +94,6 @@
         android:layout_marginBottom="20dp"
         android:text="@string/price"
         android:onClick="showprice"/>
-    <DatePicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/from"
-        android:layout_marginTop="15dp"
-        android:layout_gravity="center"/>
-    <DatePicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/to"
-        android:layout_marginTop="15dp"
-        android:layout_gravity="center"/>
 
 
 <TextView

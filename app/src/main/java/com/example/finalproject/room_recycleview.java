@@ -34,7 +34,7 @@ import model.room;
 public class room_recycleview extends AppCompatActivity {
     private RequestQueue queue;
     String [] roomdb;
-    TextView tt;
+
     private RecyclerView recycler;
 String username="";
     @Override
@@ -60,21 +60,19 @@ String username="";
                 null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
-                ArrayList<String> rooms = new ArrayList<>();
+
                 String [] roomm=new String[response.length()];
 
                 for (int i = 0; i < response.length(); i++) {
                     try {
                         JSONObject obj = response.getJSONObject(i);
                         String s=obj.get("roomNumber").toString();
-                        //s = s+ " "+ obj.get("price").toString() + " "+obj.getString("category") + " "  +obj.get("capacity").toString();
+
                         roomm[i] = "Room Number: "+obj.get("roomNumber").toString()+ ","
                                 + " Price:  "+ obj.get("price").toString() + ","
                                 + "Category:  "+obj.getString("category") + "," + " capacity: "
                                 +obj.get("capacity").toString()+" Status : "+obj.getString("status");
-                       // rooms.add(s);
 
-//                        roomm[i]=obj.get("roomNumber").toString();
 
                         Log.d("-------------------", roomm[i]);
                     }catch(JSONException exception){

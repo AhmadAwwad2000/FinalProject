@@ -19,6 +19,18 @@ public class room {
             new model.room("Room 12", R.drawable.img_15),
             new model.room("Room 12", R.drawable.img_8),
             new model.room("Room 12", R.drawable.img_11),
+            new model.room("Room 12", R.drawable.img_14),
+            new model.room("Room 12", R.drawable.img_15),
+            new model.room("Room 12", R.drawable.img_8),
+            new model.room("Room 12", R.drawable.img_11),
+            new model.room("Room 12", R.drawable.img_14),
+            new model.room("Room 12", R.drawable.img_15),
+            new model.room("Room 12", R.drawable.img_8),
+            new model.room("Room 12", R.drawable.img_11),
+            new model.room("Room 12", R.drawable.img_14),
+            new model.room("Room 12", R.drawable.img_15),
+            new model.room("Room 12", R.drawable.img_8),
+            new model.room("Room 12", R.drawable.img_11),
 
     };
     private room(String name,int roomNumber)
