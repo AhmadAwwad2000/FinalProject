@@ -47,8 +47,8 @@ public class searchRoom extends AppCompatActivity {
                 for (int i = 0; i < response.length(); i++) {
                     try {
                         JSONObject obj = response.getJSONObject(i);
-                        String sent=obj.getString("roomNumber")+" "+obj.getString("price")+" "+obj.getString("category")+" "+
-                                obj.getString("capacity")+" "+obj.getString("status");
+                        String sent="Room Number : "+obj.getString("roomNumber")+"... Price :  "+obj.getString("price")+" .........Category :   "+obj.getString("category")+" ...capacity :  "+
+                                obj.getString("capacity")+" ...status : "+obj.getString("status");
                         rooms.add(sent);
                     }catch(JSONException exception){
                         Log.d("Error", exception.toString());

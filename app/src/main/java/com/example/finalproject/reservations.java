@@ -172,11 +172,6 @@ public class reservations extends AppCompatActivity {
         queue.add(request);
 
 
-
-
-
-
-
     }
     //////////////////////////////////////////////////////////////////////////
     public void checkroomres(String uname ,String res){
