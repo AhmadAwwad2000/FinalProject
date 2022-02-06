@@ -15,6 +15,7 @@ import model.select_from_spinner;
 public class mainpage extends AppCompatActivity {
 private TextView textview;
 private Spinner spinner;
+String uname="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +23,7 @@ private Spinner spinner;
         textview=findViewById(R.id.textview);
         spinner=findViewById(R.id.spinner);
         Intent intent=getIntent();
-        String uname=intent.getStringExtra("username");
+       uname=intent.getStringExtra("username");
         textview.setText("WELCOME "+uname);
         fillspinner();
     }
@@ -51,6 +52,10 @@ private Spinner spinner;
             startActivity(intent2);}
         else if(spinner.getSelectedItem().toString().equals("View all booked rooms")){
             Intent intent2 = new Intent(this ,reserved_room.class);
+            startActivity(intent2);}
+        else if(spinner.getSelectedItem().toString().equals("update informations")){
+            Intent intent2 = new Intent(this ,updateInfo.class);
+            intent2.putExtra("username",uname);
             startActivity(intent2);}
     }
 

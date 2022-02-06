@@ -50,5 +50,9 @@ private TextView textview;
         else if(spinner.getSelectedItem().toString().equals("cancellation of reservation")){
             Intent intent = new Intent(this ,cancellationofreservation.class);
             startActivity(intent);}
+        else if(spinner.getSelectedItem().toString().equals("Update informations")){
+            Intent intent = new Intent(this ,updateInfo.class);
+            intent.putExtra("username",uname);
+            startActivity(intent);}
     }
 }

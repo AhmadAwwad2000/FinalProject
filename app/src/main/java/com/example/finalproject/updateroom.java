@@ -40,6 +40,7 @@ public class updateroom extends AppCompatActivity {
         category=findViewById(R.id.category);
         capacity=findViewById(R.id.capacity);
         status=findViewById(R.id.status);
+        queue = Volley.newRequestQueue(this);
 
     }
 
@@ -107,4 +108,42 @@ public class updateroom extends AppCompatActivity {
 
     }
 
+    public void showall(View view) {
+        String roomnumber = room_number.getText().toString();
+        String url = "http://10.0.2.2/android_project/search_room.php?roomNumber=" + roomnumber;
+
+        JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url,
+                null, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                ArrayList<String> rooms = new ArrayList<>();
+                for (int i = 0; i < response.length(); i++) {
+                    try {
+                        JSONObject obj = response.getJSONObject(i);
+                      //  String sent="Room Number : "+obj.getString("roomNumber")+"... Price :  "+obj.getString("price")+" .........Category :   "+obj.getString("category")+" ...capacity :  "+
+                        //        obj.getString("capacity")+" ...status : "+obj.getString("status");
+                        price.setText(obj.getString("price"));
+                        category.setText(obj.getString("category"));
+                        capacity.setText(obj.getString("capacity"));
+                        status.setText(obj.getString("status"));
+
+                    }catch(JSONException exception){
+                        Log.d("Error", exception.toString());
+                    }
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+                Toast.makeText(updateroom.this, error.toString(),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        queue.add(request);
+
+
+    }
 }

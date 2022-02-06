@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Finalproject"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".updateInfo"
+            android:exported="true" />
+        <activity
             android:name=".reserved_room"
             android:exported="true" />
         <activity

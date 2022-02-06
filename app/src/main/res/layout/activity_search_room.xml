@@ -8,12 +8,17 @@
     android:orientation="vertical"
     android:background="@drawable/img_5"
     tools:context=".searchRoom">
-    <TableLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
 
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".searchRoom">
         <EditText
-            android:layout_width="250dp"
+            android:layout_width="150dp"
             android:layout_height="60dp"
             android:hint="@string/enter_the_room_number"
             android:layout_marginTop="30dp"
@@ -21,21 +26,22 @@
             android:id="@+id/edtroomnumber"
             android:background="@color/white"
             android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
+            android:layout_marginRight="20dp"
             android:gravity="center"
             android:layout_marginBottom="30dp"/>
 
         <Button
             style="@style/btn"
-            android:layout_width="300dp"
+            android:layout_width="150dp"
             android:layout_height="80dp"
-            android:layout_marginRight="70dp"
-            android:layout_marginLeft="70dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginBottom="40dp"
             android:onClick="btnSearch_Click"
             android:text="@string/show_room"
-            android:textSize="22dp" />
-
+            android:textSize="15dp" />
+</androidx.appcompat.widget.LinearLayoutCompat>
         <ListView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -68,6 +74,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:id="@+id/allroom"/>
-    </TableLayout>
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

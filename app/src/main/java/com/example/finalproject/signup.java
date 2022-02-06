@@ -56,8 +56,12 @@ private EditText firstname,lastname,password,email,username,phonenumber;
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     // on below line we are displaying a success toast message.
-                    if(jsonObject.getString("message").equals("true"))
+                    if(jsonObject.getString("message").equals("true")){
+                        if(!uname.contains("admin"))
                     signup(fname,lname,pass,mail,uname,phone);
+                    else
+                        Toast.makeText(signup.this, "user name must be end with @user", Toast.LENGTH_SHORT).show();
+                    }
                     else
                         Toast.makeText(signup.this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
                     } catch (JSONException e) {
