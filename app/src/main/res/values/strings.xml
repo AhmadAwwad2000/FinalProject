@@ -59,5 +59,9 @@
     <string name="the_total_price_is">the total price is :</string>
     <string name="enter_the_name">enter the name :</string>
     <string name="welcome_to_update_information_page">Welcome To Update information Page</string>
+    <string name="create_admin_or_user_account">create admin or user account</string>
+    <string name="weather">weather</string>
+    <string name="show">show</string>
+    <string name="reserve">reserve</string>
 
 </resources>

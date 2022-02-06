@@ -27,48 +27,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:context=".viewuser">
-    <EditText
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/username"
-        android:hint="@string/enter_the_name"
-        android:gravity="center"
-        android:background="@color/white"
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="30dp"
+            android:padding="3dp"
+            android:id="@+id/username"
+            android:hint="@string/enter_the_name"
+            android:background="@color/white"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:layout_marginBottom="30dp"
 
-        />
+            />
 
-    <Button
-        android:layout_width="100dp"
-        android:gravity="center"
-        android:layout_marginLeft="60dp"
-        android:layout_height="50dp"
-        android:text="@string/search"
-        android:id="@+id/btnSearch"
-        android:onClick="btnSearch_Click"
-        android:layout_marginBottom="10dp"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:textSize="15dp"
-        />
+        <Button
+            style="@style/btn"
+            android:layout_width="105dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="40dp"
+            android:text="@string/search"
+            android:id="@+id/btnSearch"
+            android:onClick="btnSearch_Click"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            />
     </androidx.appcompat.widget.LinearLayoutCompat>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:id="@+id/lstuser"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/viewuser"
-        android:background="@color/white"
-        android:textSize="22dp"
-        android:padding="8dp"
-        android:gravity="center"
-        android:text="@string/if_you_want_show_all_user_click_on_button"
-        android:layout_marginTop="30dp"
-        />
+
     <Button
         android:layout_width="250dp"
         android:layout_height="63dp"

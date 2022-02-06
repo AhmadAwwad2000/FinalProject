@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -16,12 +17,14 @@ public class mainpage extends AppCompatActivity {
 private TextView textview;
 private Spinner spinner;
 String uname="";
+private EditText username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainpage);
         textview=findViewById(R.id.textview);
         spinner=findViewById(R.id.spinner);
+        username=findViewById(R.id.username);
         Intent intent=getIntent();
        uname=intent.getStringExtra("username");
         textview.setText("WELCOME "+uname);
@@ -60,6 +63,17 @@ String uname="";
     }
 
 
+    public void createaccount(View view) {
+        Intent intent2 = new Intent(this ,CreateAccount.class);
+        startActivity(intent2);
 
+    }
 
+    public void res(View view) {
+        String user=username.getText().toString();
+        Intent intent2 = new Intent(this ,room_recycleview.class);
+        intent2.putExtra("username",user);
+        startActivity(intent2);
+
+    }
 }

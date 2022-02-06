@@ -10,54 +10,40 @@
     tools:context=".searchRoom">
 
 
-<androidx.appcompat.widget.LinearLayoutCompat
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".searchRoom">
-        <EditText
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:hint="@string/enter_the_room_number"
-            android:layout_marginTop="30dp"
-            android:padding="10dp"
-            android:id="@+id/edtroomnumber"
-            android:background="@color/white"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="20dp"
-            android:gravity="center"
-            android:layout_marginBottom="30dp"/>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".searchRoom">
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="35dp"
+                    android:hint="@string/enter_the_room_number"
+                    android:layout_marginTop="30dp"
+                    android:padding="3dp"
+                    android:id="@+id/edtroomnumber"
+                    android:background="@color/white"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:layout_marginBottom="30dp"/>
 
-        <Button
-            style="@style/btn"
-            android:layout_width="150dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginBottom="40dp"
-            android:onClick="btnSearch_Click"
-            android:text="@string/show_room"
-            android:textSize="15dp" />
-</androidx.appcompat.widget.LinearLayoutCompat>
+                <Button
+                    style="@style/btn"
+                    android:layout_width="105dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:onClick="btnSearch_Click"
+                    android:text="@string/show"
+                    />
+        </androidx.appcompat.widget.LinearLayoutCompat>
         <ListView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/lstroom"/>
-        <TextView
-            android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:textSize="50dp"
-            android:layout_marginBottom="30dp"
-            android:text="click!"
-            android:gravity="center"
-            android:background="@color/white"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            style="@style/textveiw"
-            />
+
         <Button
             android:layout_width="300dp"
             android:layout_height="60dp"
