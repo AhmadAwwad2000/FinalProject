@@ -46,6 +46,7 @@ private TextView textview;
             startActivity(intent);}
         else if(spinner.getSelectedItem().toString().equals("eat")){
             Intent intent = new Intent(this ,rest_recycleview.class);
+            intent.putExtra("username",uname);
             startActivity(intent);}
         else if(spinner.getSelectedItem().toString().equals("cancellation of reservation")){
             Intent intent = new Intent(this ,cancellationofreservation.class);
@@ -54,5 +55,10 @@ private TextView textview;
             Intent intent = new Intent(this ,updateInfo.class);
             intent.putExtra("username",uname);
             startActivity(intent);}
+    }
+
+    public void logout(View view) {
+        Intent intent = new Intent(this ,login.class);
+        startActivity(intent);
     }
 }

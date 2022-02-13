@@ -9,7 +9,8 @@ public class select_from_spinner_user {
 
     }
     public String [] cat(){
-        String [] type=new String[]{"Search room","Room reservations","Swimming","eat","cancellation of reservation","Update informations"};
+        String [] type=new String[]{"Search room","Room reservations",
+                "Swimming","eat","cancellation of reservation","Update informations"};
         return type;
     }
 }

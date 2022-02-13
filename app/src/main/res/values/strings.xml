@@ -63,5 +63,9 @@
     <string name="weather">weather</string>
     <string name="show">show</string>
     <string name="reserve">reserve</string>
+    <string name="User_name">User name</string>
+    <string name="enter_the_user_name">Enter the user name</string>
+    <string name="log_out">log out</string>
+    <string name="log_outt">Log out</string>
 
 </resources>

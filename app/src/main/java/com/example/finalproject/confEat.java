@@ -32,10 +32,13 @@ public class confEat extends AppCompatActivity {
 private EditText edteat;
 private TextView show_price,okmessage;
  private RequestQueue queue;
+ String uname="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_conf_eat);
+        Intent intent=getIntent();
+        uname=intent.getStringExtra("username");
         edteat=findViewById(R.id.edteat);
         show_price=findViewById(R.id.show_price);
         okmessage=findViewById(R.id.okmessage);
@@ -86,6 +89,7 @@ private TextView show_price,okmessage;
 
     public void go_to_eat_page(View view) {
         Intent intent = new Intent(this ,UserActivity.class);
+        intent.putExtra("username",uname);
         startActivity(intent);
     }
 }

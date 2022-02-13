@@ -55,11 +55,16 @@ private EditText username;
             startActivity(intent2);}
         else if(spinner.getSelectedItem().toString().equals("View all booked rooms")){
             Intent intent2 = new Intent(this ,reserved_room.class);
+            intent2.putExtra("username",uname);
             startActivity(intent2);}
         else if(spinner.getSelectedItem().toString().equals("update informations")){
             Intent intent2 = new Intent(this ,updateInfo.class);
             intent2.putExtra("username",uname);
             startActivity(intent2);}
+        else if(spinner.getSelectedItem().toString().equals("update information for specific user")){
+            Intent intent2 = new Intent(this ,updateInformationFromAdmin.class);
+            startActivity(intent2);}
+
     }
 
 
@@ -75,5 +80,10 @@ private EditText username;
         intent2.putExtra("username",user);
         startActivity(intent2);
 
+    }
+
+    public void logoutt(View view) {
+        Intent intent = new Intent(this ,login.class);
+        startActivity(intent);
     }
 }

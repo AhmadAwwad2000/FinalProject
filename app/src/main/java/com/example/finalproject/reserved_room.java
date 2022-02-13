@@ -25,10 +25,13 @@ import java.util.ArrayList;
 
 public class reserved_room extends AppCompatActivity {
     private RequestQueue queue;
+    String uname="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reserved_room);
+        Intent intent=getIntent();
+        uname=intent.getStringExtra("username");
         queue = Volley.newRequestQueue(this);
         filllist();
     }
@@ -74,6 +77,7 @@ public class reserved_room extends AppCompatActivity {
 
     public void prev(View view) {
         Intent intent = new Intent(this ,mainpage.class);
+        intent.putExtra("username",uname);
         startActivity(intent);
     }
 }

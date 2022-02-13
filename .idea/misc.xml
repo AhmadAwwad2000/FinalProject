@@ -10,8 +10,10 @@
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_cancellationofreservation.xml" value="0.2269021739130435" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_conf_eat.xml" value="0.19067028985507245" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_create_account.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_delete_user.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_deleteroom.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_login.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_logout.xml" value="0.25271739130434784" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_mainpage.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_reservations.xml" value="0.25416666666666665" />
@@ -22,6 +24,7 @@
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_signup.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_swimming.xml" value="0.23385416666666667" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_update_info.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_update_information_from_admin.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_updateroom.xml" value="0.1" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_user.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/finalproject/app/src/main/res/layout/activity_viewuser.xml" value="0.25416666666666665" />

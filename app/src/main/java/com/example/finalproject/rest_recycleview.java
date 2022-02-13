@@ -25,7 +25,7 @@ import model.CaptionedImagesAdapter;
 import model.Food;
 
 public class rest_recycleview extends AppCompatActivity {
-
+    String uname="";
     private RequestQueue queue;
 
     private RecyclerView recycler;
@@ -34,6 +34,8 @@ public class rest_recycleview extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rest_recycleview);
+        Intent intent=getIntent();
+        uname=intent.getStringExtra("username");
         recycler= findViewById(R.id.pizza_recycler);
         recycler.setLayoutManager(new LinearLayoutManager(this));
         queue = Volley.newRequestQueue(this);
@@ -43,6 +45,7 @@ public class rest_recycleview extends AppCompatActivity {
     }
     public void onClickeat(View view){
         Intent intent = new Intent(this ,confEat.class);
+        intent.putExtra("username",uname);
         startActivity(intent);
     }
     public void getdatafromdatabase(){
