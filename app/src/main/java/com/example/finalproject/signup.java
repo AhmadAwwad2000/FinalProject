@@ -2,6 +2,7 @@ package com.example.finalproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -57,7 +58,7 @@ private EditText firstname,lastname,password,email,username,phonenumber;
                     JSONObject jsonObject = new JSONObject(response);
                     // on below line we are displaying a success toast message.
                     if(jsonObject.getString("message").equals("true")){
-                        if(!uname.contains("admin"))
+                        if(!uname.contains("admin")&&uname.endsWith("@user"))
                     signup(fname,lname,pass,mail,uname,phone);
                     else
                         Toast.makeText(signup.this, "user name must be end with @user", Toast.LENGTH_SHORT).show();
@@ -102,7 +103,14 @@ private EditText firstname,lastname,password,email,username,phonenumber;
 
 
     }
+
     ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public void go_to_main_page(String uname){
+        Intent intent = new Intent(this ,UserActivity.class);
+        intent.putExtra("username",uname);
+        startActivity(intent);
+    }
     public void signup(String fname,String lname,String pass,String mail,String uname, String phone){
         String url = "http://10.0.2.2/android_project/adduser.php";
         RequestQueue queue = Volley.newRequestQueue(signup.this);
@@ -115,6 +123,7 @@ private EditText firstname,lastname,password,email,username,phonenumber;
                     // on below line we are displaying a success toast message.
                     Toast.makeText(signup.this,
                             jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+                    go_to_main_page(uname);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
